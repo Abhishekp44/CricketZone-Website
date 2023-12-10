@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CricketZone | Scorecard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+      #overs1{
+        color: white;
+        text-shadow: 1px 1px 5px blue;
+      }
+      #overs2{
+        color: white;
+        text-shadow: 0px 0px 10px grey,1px 1px 5px rgb(207, 207, 64) ;
+      }
+    </style>
+</head>
+<body>
+    <!--Header Section-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-3 bg-body rounded">
+            <div class="container-fluid">
+            <div class="text-white bg-success p-1 rounded-pill border border-light">
+              <a href="index.html" style="text-decoration: none;color: white;"><h4>CricketZone</h4></a>
+            </div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs me-auto mb-2 mb-lg-0 ms-5">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Teams.html">Teams</a>
+                  </li>
+                  <li class="nav-item ms-4">
+                    <a class="nav-link" href="Matches.html">Matches</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div><!--Header End-->
+
+    <!--Main Section-->
+    <div class="container shadow bg-body mt-3 pt-3">
+      <div class="row">
+        <h5 class="text-center mb-3">5th T20</h5>
+        <div class="col-md-6 offset-md-3 text-center">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="images/India.png" id="img">
+              <h6 class="score" id="teamAScore">160/8&nbsp;(20)</h6>
+            </div>
+
+            <div class="col-md-6">
+              <img src="images/Australia.png" id="img">
+              <h6 class="score" id="teamBScore">154/8&nbsp;(20)</h6>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <h4><span id="overs">India Won by 6 runs</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h5><span id="overs1">India</span></h5>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Batting</th>
+                    <th scope="col">R</th>
+                    <th scope="col">B</th>
+                    <th scope="col">4s</th>
+                    <th scope="col">6s</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Yashasvi Jaiswal</th>
+                    <td>21</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ruturaj Gaikwad</th>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Shreyas Iyer</th>
+                    <td>53</td>
+                    <td>37</td>
+                    <td>5</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Suryakumar Yadav</th>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rinku Singh</th>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Jitesh Sharma</th>
+                    <td>24</td>
+                    <td>16</td>
+                    <td>3</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Axar Patel</th>
+                    <td>31</td>
+                    <td>24</td>
+                    <td>2</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ravi Bishnoi</th>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Arshdeep Singh</th>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0do</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Avesh Khan</th>
+                    <td colspan="4">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mukesh Kumar</th>
+                    <td colspan="4">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Extras</th>
+                    <td colspan="4">6(W 3,B 1,LB 2)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total runs</th>
+                    <td colspan="4">160(8 wkts,20 ov)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Bowling</th>
+                    <th scope="col">O</th>
+                    <th scope="col">M</th>
+                    <th scope="col">R</th>
+                    <th scope="col">W</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Aaron Hardie</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>21</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Jason Behrendorff</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>38</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ben Dwarshuis</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>30</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nathan Ellis</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>42</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tanveer Sangha</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>26</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <h5><span id="overs2">Australia</span></h5>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Batting</th>
+                    <th scope="col">R</th>
+                    <th scope="col">B</th>
+                    <th scope="col">4s</th>
+                    <th scope="col">6s</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Travis Head</th>
+                    <td>28</td>
+                    <td>18</td>
+                    <td>5</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Josh Philippe</th>
+                    <td>54</td>
+                    <td>36</td>
+                    <td>0</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ben McDermott</th>
+                    <td>53</td>
+                    <td>37</td>
+                    <td>5</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Aaron Hardie</th>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tim David</th>
+                    <td>17</td>
+                    <td>17</td>
+                    <td>0</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Matt Short</th>
+                    <td>16</td>
+                    <td>11</td>
+                    <td>2</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Matthew Wade(C)(Wk)</th>
+                    <td>22</td>
+                    <td>15</td>
+                    <td>4</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ben Dwarshuis</th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nathan Ellis</th>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Jason Behrendorff</th>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tanveer Sangha/th>
+                    <td colspan="4">-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Extras</th>
+                    <td colspan="4">1(W 1)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total runs</th>
+                    <td colspan="4">154(8 wkts,20 ov)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Bowling</th>
+                    <th scope="col">O</th>
+                    <th scope="col">M</th>
+                    <th scope="col">R</th>
+                    <th scope="col">W</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Arshdeep Singh</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>40</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Avesh Khan</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>39</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mukesh Kumar</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>32</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ravi Bishnoi</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>29</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Axar Patel</th>
+                    <td>4.0</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--Main End-->
+
+    <!--Footer Section-->
+    <div>
+        <div class="row p-3">
+            <div class="col-md-4">
+                <div class="text-white bg-success p-1 rounded-pill border border-light w-50 text-center mt-3">
+                    <h4>CricketZone</h4>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <h5>Quick links</h5>
+                <a href="index.html" class="anchor"><b>Home</b></a><br>
+                <a href="About.html" class="anchor"><b>About</b></a><br>
+                <a href="contact.html" class="anchor"><b>Contact</b></a><br>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact US</h5>
+                <h5><a href="#"><i class="bi bi-facebook"></i></a></h5>
+                <h5><a href="#"><i class="bi bi-instagram"></i></a></h5>
+                <h5><a href="#"></a><i class="bi bi-twitter"></i></h5>
+                
+            </div>
+        </div><!--3rd row end or footer section end-->
+    </div>
+
+    </div><!--Footer End-->
+</body>
+</html>
