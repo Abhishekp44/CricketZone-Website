@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+    <div class="container-fluid shadow p-3 m-3 bg-body d-flex overflow-auto" style="width: 100%;">
+        {% for x in data1 %}
+        <div class="col-md-3 d-inline-block shadow p-3 m-3 rounded">
+            <p class="bg-success text-white p-3 text-center py-5">
+                <img src="{{x.mid.team1_flag.url}}" width="68px" height="55px">&nbsp; Vs &nbsp;<img src="{{x.mid.team2_flag.url}}" width="68px" height="55px">
+            </p>
+            <p>
+                <b>Match Name:</b>&nbsp;{{x.mid.name}}
+            </p>            
+            <p>
+                <b>Date:</b>&nbsp;{{x.m_date}}
+            </p>
+            <p>
+                <b>Price:</b>{{x.m_price}}
+            </p>
+            <p class="text-center">
+                <a class="btn btn-primary" href="/addtocart/{{x.id}}">Book Tickets</a>
+            </p>
+        </div>
+          {% endfor %}
+    </div>
+  
+
+{% endblock 'main' %}

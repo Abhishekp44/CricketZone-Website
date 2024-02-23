@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CricketZone</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+      .selectt {
+            color: #fff;
+            padding: 30px;
+            display: none;
+            margin-top: 30px;
+            width: 60%;
+        }
+ 
+        label {
+            margin-right: 20px;
+        }
+
+        table img{
+            width: 40px;
+            height: 30px;
+        }
+        
+        .info{
+          display: none;
+        }
+        
+
+    .window {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    #close-btn {
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+
+  
+    </style>
+</head>
+<body>
+    <!--Header Section-->
+    <header class="header-section mb-5">
+      <div class="header__nav">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-2">
+                      <div class="logo">
+                          <a href="index.html"><img src="{% static 'images/logo.png' %}" width="180px"></a>
+                      </div>
+                  </div>
+                  <div class="col-lg-10">
+                      <div class="nav-menu">
+                          <ul class="main-menu">
+                              <li><a href="/home" id="nav-link">Home</a></li>
+                              <li><a href="/matches" id="nav-link">Matches</a></li>
+                              <li><a id="nav-link">Teams</a>
+                                  <ul class="dropdown">
+                                      <li><a href="/teams" id="nav-link">International Teams</a></li>
+                                      <li><a href="/league" id="nav-link">League Teams</a></li>
+                                  </ul>
+                              </li>
+                              <li><a id="nav-link">Rankings</a>
+                                <ul class="dropdown">
+                                    <li><a href="/rank_m" id="nav-link">ICC-Men's Rankings</a></li>
+                                    <li><a href="/rank_w" id="nav-link">ICC-Women's Rankings</a></li>
+                                </ul>
+                            </li>
+                              <li><a href="/tickets" id="nav-link">Tickets</a></li>
+                              <li>
+                                  <form class="d-flex" method="get" action="/search">
+                                      <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query">
+                                      <button class="btn btn-outline-success" type="submit"><i class="bi bi-search text-white"></i></button>
+                                  </form>
+                              </li>
+                              {% if user.is_authenticated %}
+                              <li><a href="#" id="nav-link"><i class="bi bi-person-circle" style="font-size: x-large;"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="/dashboard" id="nav-link">Dashboard</a></li>
+                                    <li><a href="logout" id="nav-link">Logout</a></li>
+                                </ul>
+                              </li>
+                              {% else %}
+                              <li><a href="#" id="nav-link"><i class="bi bi-person-circle" style="font-size: x-large;"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="register" id="nav-link">Register</a></li>
+                                    <li><a href="login" id="nav-link">Login</a></li>
+                                </ul>
+                            </li>
+                              {% endif %}
+                          </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="canvas-open">
+                  <i class="fa fa-bars"></i>
+              </div>
+              
+          </div>
+      </div>
+    </header>
+    <!--Header End-->
+    
+    

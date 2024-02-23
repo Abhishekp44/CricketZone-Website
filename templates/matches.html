@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!--Main Section-->
+
+<div class="row shadow p-3 m-3 bg-body">
+  {% for x in data %}
+    <div class="card shadow bg-body rounded mx-auto mb-3 p-2  d-flex flex-row">
+      <div class="col-3 ps-2 border-end">
+        <p>
+          {% if x.cat == 1 %}
+            <p><h6 style="color: #fa0aea">T20</h6></p>
+          {% elif x.cat == 2 %}
+            <p><h6 style="color: #1ccec9">ODI</h6></p>
+          {% else %}
+            <p><h6 style="color: #24d657">Test</h6></p>
+          {% endif %}
+        </p>
+        <p>
+          <h6 class="card-title">{{x.name}}</h6>
+        </p>
+      </div>
+
+      <div class="col-6 ps-2 pt-2 border-end">
+        <div class="row">
+          <div class="col-1 text-end">
+            <img src="{{x.team1_flag.url}}" alt="" width="25px" height="20px">
+          </div>
+          <div class="col-6">
+            <h5>{{x.team1_name}}</h5>
+          </div>
+          <div class="col-5">
+            <h5>{{x.team1_score}}</h5>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-1 text-end">
+            <img src="{{x.team2_flag.url}}" alt="" width="25px" height="20px">
+          </div>
+          <div class="col-6">
+            <h5>{{x.team2_name}}</h5>
+          </div>
+          <div class="col-5">
+            <h5>{{x.team2_score}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 text-center">
+        <a href="/scorecard/{{x.id}}" class="btn border rounded-pill m-4">
+          Match Details <i class="bi bi-arrow-right-circle"></i>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+
+  
+  </div>
+
+<!--Main End-->
+{% endblock 'main' %}
+

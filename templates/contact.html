@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+   
+    <div class="row shadow p-5 m-3 bg-body d-flex justify-content-center">
+        <h2>Contact Us</h2>
+        {% if msg %}
+        <p>{{ msg }}</p>
+        {% else %}
+            <form method="post" action="/contact">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+
+{% endblock 'main' %}

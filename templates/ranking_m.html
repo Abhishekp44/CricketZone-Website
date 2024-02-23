@@ -1,0 +1,372 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+     <!--Main Section-->
+     <div class="container-fluid shadow bg-body mx-auto mt-3 pb-3">
+        <center>
+          <div class="btn-group m-3" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" onclick="showInfo(1)"  value="T20" id="btnradio1" autocomplete="off" checked> 
+            <label class="btn btn-outline-success" for="btnradio1">T20</label>
+
+            <input type="radio" class="btn-check" onclick="showInfo(2)"  value="ODI" id="btnradio2" autocomplete="off" checked> 
+            <label class="btn btn-outline-success" for="btnradio2">ODI</label>
+
+            <input type="radio" class="btn-check" onclick="showInfo(3)"  value="Test" id="btnradio3" autocomplete="off" checked> 
+            <label class="btn btn-outline-success" for="btnradio3">Test</label>
+
+          </div>
+
+          <div class="info bg-success" id="info1">
+              <table class="table table-hover text-white">
+                  <thead>
+                      <tr>
+                        <th scope="col">POS</th>
+                        <th scope="col">Teams</th>
+                        <th scope="col">Matches</th>
+                        <th scope="col">POints</th>
+                        <th scope="col">Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <img src="{% static 'images/India.png' %}" alt="">&nbsp;India
+                        </td>
+                        <td>68</td>
+                        <td>18,041</td>
+                        <td>265</td>
+                      </tr>
+
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>
+                            <img src="{% static 'images/England.png' %}" alt="">&nbsp;England
+                          </td>
+                          <td>48</td>
+                          <td>12,305</td>
+                          <td>256</td>
+                        </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          <img src="{% static 'images/NewZealand.png' %}" alt="">&nbsp;New Zeland
+                        </td>
+                        <td>53</td>
+                        <td>13,534</td>
+                        <td>255</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          <img src="{% static 'images/Pakistan.png' %}" alt="">&nbsp;Pakistan
+                        </td>
+                        <td>53</td>
+                        <td>13,325</td>
+                        <td>251</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>
+                          <img src="{% static 'images/Australia.png' %}" alt="">&nbsp;Australia
+                        </td>
+                        <td>39</td>
+                        <td>9,760</td>
+                        <td>250</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>
+                          <img src="{% static 'images/South_Africa.png' %}" alt="">&nbsp;South Africa
+                        </td>
+                        <td>37</td>
+                        <td>9,210</td>
+                        <td>249</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>
+                          <img src="{% static 'images/WestIndies.png' %}" alt="">&nbsp;West Indies
+                        </td>
+                        <td>44</td>
+                        <td>10,800</td>
+                        <td>245</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>
+                          <img src="{% static 'images/srilanka.png' %}" alt="">&nbsp;Sri Lanka
+                        </td>
+                        <td>38</td>
+                        <td>8,940</td>
+                        <td>235</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>
+                          <img src="{% static 'images/bangladesh.png' %}" alt="">&nbsp;Bangladesh
+                        </td>
+                        <td>44</td>
+                        <td>9,943</td>
+                        <td>226</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>
+                          <img src="{% static 'images/afghanistan.png' %}" alt="">&nbsp;Afghanistan
+                        </td>
+                        <td>31</td>
+                        <td>6,852</td>
+                        <td>221</td>
+                      </tr>
+
+                    </tbody>
+              </table>
+          </div>
+          <div class="info bg-success" id="info2">
+              <table class="table table-hover text-white">
+                  <thead>
+                      <tr>
+                        <th scope="col">POS</th>
+                        <th scope="col">Teams</th>
+                        <th scope="col">Matches</th>
+                        <th scope="col">POints</th>
+                        <th scope="col">Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <img src="{% static 'images/India.png' %}" alt="">&nbsp;India
+                        </td>
+                        <td>58</td>
+                        <td>7,020</td>
+                        <td>121</td>
+                      </tr>
+
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>
+                            <img src="{% static 'images/Australia.png' %}" alt="">&nbsp;Australia
+                          </td>
+                          <td>42</td>
+                          <td>4,926</td>
+                          <td>117</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          <img src="{% static 'images/South_Africa.png' %}" alt="">&nbsp;South Africa
+                        </td>
+                        <td>37</td>
+                        <td>4,062</td>
+                        <td>110</td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          <img src="{% static 'images/Pakistan.png' %}" alt="">&nbsp;Pakistan
+                        </td>
+                        <td>36</td>
+                        <td>3,922</td>
+                        <td>109</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>
+                          <img src="{% static 'images/NewZealand.png' %}" alt="">&nbsp;New Zeland
+                        </td>
+                        <td>46</td>
+                        <td>4,708</td>
+                        <td>102</td>
+                      </tr>
+
+                      <tr>
+                          <th scope="row">6</th>
+                          <td>
+                            <img src="{% static 'images/England.png' %}" alt="">&nbsp;England
+                          </td>
+                          <td>41</td>
+                          <td>3,934</td>
+                          <td>96</td>
+                      </tr>
+
+                      
+                      <tr>
+                        <th scope="row">7</th>
+                        <td>
+                          <img src="{% static 'images/srilanka.png' %}" alt="">&nbsp;Sri Lanka
+                        </td>
+                        <td>47</td>
+                        <td>4,134</td>
+                        <td>88</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>
+                          <img src="{% static 'images/bangladesh.png' %}" alt="">&nbsp;Bangladesh
+                        </td>
+                        <td>47</td>
+                        <td>4,095</td>
+                        <td>87</td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>
+                          <img src="{% static 'images/afghanistan.png' %}" alt="">&nbsp;Afghanistan
+                        </td>
+                        <td>30</td>
+                        <td>2,533</td>
+                        <td>84</td>
+                      </tr>   
+
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>
+                          <img src="{% static 'images/WestIndies.png' %}" alt="">&nbsp;West Indies
+                        </td>
+                        <td>41</td>
+                        <td>2,926</td>
+                        <td>71</td>
+                      </tr>
+
+                    </tbody>
+              </table>
+          </div>
+          <div class="info bg-success" id="info3">
+              <table class="table table-hover text-white">
+                  <thead>
+                      <tr>
+                        <th scope="col">POS</th>
+                        <th scope="col">Teams</th>
+                        <th scope="col">Matches</th>
+                        <th scope="col">POints</th>
+                        <th scope="col">Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <img src="{% static 'images/India.png' %}" alt="">&nbsp;India
+                        </td>
+                        <td>29</td>
+                        <td>3,434</td>
+                        <td>118</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          <img src="{% static 'images/Australia.png' %}" alt="">&nbsp;Australia
+                        </td>
+                        <td>30</td>
+                        <td>3,534</td>
+                        <td>118</td>
+                      </tr>
+
+                      <tr>
+                          <th scope="row">3</th>
+                          <td>
+                            <img src="{% static 'images/England.png' %}" alt="">&nbsp;England
+                          </td>
+                          <td>43</td>
+                          <td>4,941</td>
+                          <td>115</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          <img src="{% static 'images/South_Africa.png' %}" alt="">&nbsp;South Africa
+                        </td>
+                        <td>21</td>
+                        <td>2,182</td>
+                        <td>104</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>
+                          <img src="{% static 'images/NewZealand.png' %}" alt="">&nbsp;New Zeland
+                        </td>
+                        <td>26</td>
+                        <td>2,471</td>
+                        <td>95</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">6</th>
+                        <td>
+                          <img src="{% static 'images/Pakistan.png' %}" alt="">&nbsp;Pakistan
+                        </td>
+                        <td>25</td>
+                        <td>2,304</td>
+                        <td>92</td>
+                      </tr>
+
+                     <tr>
+                        <th scope="row">7</th>
+                        <td>
+                          <img src="{% static 'images/srilanka.png' %}" alt="">&nbsp;Sri Lanka
+                        </td>
+                        <td>27</td>
+                        <td>2,123</td>
+                        <td>79</td>
+                      </tr> 
+                     
+                      <tr>
+                        <th scope="row">8</th>
+                        <td>
+                          <img src="{% static 'images/WestIndies.png' %}" alt="">&nbsp;West Indies
+                        </td>
+                        <td>28</td>
+                        <td>2,154</td>
+                        <td>77</td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row">9</th>
+                        <td>
+                          <img src="{% static 'images/bangladesh.png' %}" alt="">&nbsp;Bangladesh
+                        </td>
+                        <td>22</td>
+                        <td>1,131</td>
+                        <td>51</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">10</th>
+                        <td>
+                          <img src="{% static 'images/zimbabwe.png' %}" alt="">&nbsp;Zimbabwe
+                        </td>
+                        <td>7</td>
+                        <td>223</td>
+                        <td>32</td>
+                      </tr>
+
+                    </tbody>
+              </table>
+          </div>
+
+
+        
+  </div>
+  <!--Main End-->
+
+{% endblock 'main' %}

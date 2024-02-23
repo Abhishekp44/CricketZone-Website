@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 mx-auto mt-5 shadow p-3 mb-5 bg-body rounded">
+                <center><h2><u>User Registration</u></h2></center>
+                {% if errmsg %}
+                    <div class="alert alert-danger" role="alert">
+                        {{errmsg}}
+                    </div>
+                {% endif %}
+
+                {% if success %}
+                    <div class="alert alert-success" role="alert">
+                        {{success}}
+                    </div>
+                {% endif %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label">User Name:</label>
+                        <input type="text" class="form-control" id="Input1" placeholder="enter user name" name="uname">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" id="Input1" placeholder="enter user name" name="fname">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="Input1" placeholder="enter user name" name="lname">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Input1" class="form-label">email:</label>
+                        <input type="text" class="form-control" id="Input1" placeholder="enter user name" name="email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Input2" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="Input2" placeholder="enter user name" name="upass">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Input3" class="form-label">Confirm  Password:</label>
+                        <input type="password" class="form-control" id="Input3" placeholder="enter user name" name="ucpass">
+                    </div>
+
+                    <div class="mb-3 d-grid gap-2">
+                        <input type="submit" value="Register" class="btn btn-primary">
+                        
+                    </div>
+
+                    <div class="mb-3 col-5 mx-auto">
+                        Already User? <a href="login">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+</body>
+</html>

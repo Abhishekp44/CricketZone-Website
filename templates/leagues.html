@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+<!--Main Section-->
+<div class="container shadow bg-body mt-3">
+    <h1 class="text-center bg-success text-white">League Teams</h1>
+    <div class="row mt-5">
+      {% for x in data %}
+      <div class="col-3 text-center mb-5">
+        <a class="btn" href="teams/{{x.id}}">
+          <img src="{{x.timage.url}}" class="shadow bg-body" id="img">
+        </a>
+        <h6 class="score">{{x.tname}}</h6>
+      </div>  
+      {% endfor %}
+    </div>
+</div><!--Main End-->
+{% endblock 'main' %}

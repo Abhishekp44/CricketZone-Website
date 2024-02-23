@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!--Main Section-->
+<div class="row mx-auto">
+  
+    <div class="col-3 shadow p-3 mb-3 bg-body rounded mx-auto">
+      {% for x in data %}
+      <a class="btn" href="/scorecard/{{x.id}}" role="button" style="width: 99%;">
+        <div class="card text-center shadow bg-body rounded mx-auto" style="height: 208px;">
+          <div class="card-body">
+            <h6 class="card-title">{{x.m_date}} | {{x.mid.name}}</h6>
+            <p class="card-text"><img src="{{x.mid.team1_flag.url}}" alt="" width="18px" height="12px">   {{x.mid.team1_score}}</p>
+            <p class="card-text"><img src="{{x.mid.team2_flag.url}}" alt="" width="18px" height="12px">   {{x.mid.team2_score}}</p>
+            <p class="card-text">{{x.mid.status}}</p>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+        
+    <div class="col-8 shadow p-3 mb-3 bg-body rounded mx-auto">
+      {% for x in news %}
+      <div class="card mb-2">
+        <img src="{{x.nimg.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{x.title}}</h5>
+          <p class="card-text">{{x.ndetail}}</p>
+        </div> 
+      </div>
+      {% endfor %}
+    </div>
+</div><!--Main End-->
+{% endblock 'main' %}

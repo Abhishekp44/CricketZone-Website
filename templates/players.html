@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<div class="container shadow bg-body my-3">
+  <div class="row mt-5 py-5 px-3">
+    {% for x in data1 %}
+    <div class="card bg-dark pt-3 m-3" style="width:220px;">
+      <img class="card-img-top mx-auto shadow bg-white" src="{{x.pimg.url}}" alt="Card image" style="width: 150px;height: 180px;">
+      <div class="card-body text-center">
+        <h5 class="card-title text-white">#{{x.jersey_no}}&nbsp;{{x.pname}}</h5>
+        <p class="card-text text-white">{{x.ptype}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+</div>
+{% endblock 'main' %}

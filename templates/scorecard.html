@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!--Main Section-->
+<div class="container shadow bg-body mt-3 pt-3">
+    <div class="row-mx-auto bg-success text-white">
+      {% for x in data2 %}
+      <div class="row-2  p-3 mb-2 text-center fw-bold">
+        {{x.m_date}}
+      </div>
+      {% endfor %}
+      {% for x in data1 %}
+      <div class="row-2  p-3 mb-2 text-center fw-bold">
+        {{x.name}}
+      </div>
+      {% endfor %}
+      {% for x in data2 %}
+      <div class="row-2  p-3 mb-3 text-center fw-bold">
+        {{x.stadium}}
+      </div>
+      {% endfor %}
+      {% for x in data1 %}
+      <div class="row-3-mx-auto  p-3 mb-2 d-flex flex-row justify-content-center">
+        <div class="col-4 fs-3 fw-bold d-flex justify-content-center align-items-center">
+          <img src="{{x.team1_flag.url}}" style="width: 42px; height: 32px;" alt="">&nbsp;{{x.team1_name}}
+        </div>
+        <div class="col-4 fs-3 fw-bold d-flex justify-content-center align-items-center">
+          {{x.team1_score}}
+        </div> 
+      </div>
+
+      <div class="row-3-mx-auto p-3 mb-2 d-flex flex-row justify-content-center">
+        <div class="col-4 fs-3 fw-bold d-flex justify-content-center align-items-center">
+          <img src="{{x.team2_flag.url}}" style="width: 42px; height: 32px;" alt="">&nbsp;{{x.team2_name}}
+        </div>
+        <div class="col-4 fs-3 fw-bold d-flex justify-content-center align-items-center">
+          {{x.team2_score}}
+        </div> 
+      </div>
+
+      <div class="row-2 p-3 mb-3 text-center fw-bold">
+        {{x.status}}
+      </div>
+    </div>
+    {% endfor %}
+</div>
+  <!--Main End-->
+{% endblock 'main' %}
